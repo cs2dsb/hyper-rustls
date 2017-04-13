@@ -10,6 +10,9 @@ use std::sync::{Mutex, MutexGuard};
 use std::net::{SocketAddr, Shutdown};
 use std::time::Duration;
 
+pub use rustls::*;
+
+
 pub struct TlsStream {
   sess: Box<rustls::Session>,
   underlying: HttpStream,
